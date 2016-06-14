@@ -9,7 +9,7 @@
 import Foundation
 
 /* Times a block returning the number of nanoseconds it took */
-func timeBlock(block: (Void) -> Void) -> UInt64 {
+func timeBlock(block: (Void) -> Void) -> Int64 {
 	var info = mach_timebase_info(numer: 0, denom: 0)
 	if (mach_timebase_info(&info) != KERN_SUCCESS) {
 		return 0
@@ -23,7 +23,7 @@ func timeBlock(block: (Void) -> Void) -> UInt64 {
 	
 	let elapsed = end - start
 	
-	let nanos: UInt64 = elapsed * UInt64(info.numer) / UInt64(info.denom)
+	let nanos: Int64 = Int64(elapsed * UInt64(info.numer) / UInt64(info.denom))
 	
 	return nanos
 }
@@ -46,22 +46,22 @@ func md5(input: String) -> String {
 	return digestHex
 }
 
-func mean(data: [UInt64]) -> UInt64 {
-	let sum = data.reduce(0) { (accum, item) -> UInt64 in
+func mean(data: [Int64]) -> Int64 {
+	let sum = data.reduce(0) { (accum, item) -> Int64 in
 		return accum + item
 	}
-	return sum / UInt64(data.count)
+	return sum / Int64(data.count)
 }
 
-func stddev(data: [UInt64]) -> UInt64 {
+func stddev(data: [Int64]) -> Int64 {
 	let avg = mean(data)
 	
-	let step2 = data.map { item -> UInt64 in
+	let step2 = data.map { item -> Int64 in
 		let diff = Int64(item) - Int64(avg)
-		return UInt64(diff * diff)
+		return Int64(diff * diff)
 	}
 	
 	let step3 = mean(step2)
 	
-	return UInt64(sqrt(Double(step3)))
+	return Int64(sqrt(Double(step3)))
 }
