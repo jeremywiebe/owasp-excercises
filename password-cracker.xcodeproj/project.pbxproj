@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE05A4311D110B6F00F4C013 /* CartesianIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A4301D110B6F00F4C013 /* CartesianIterable.swift */; };
 		CE7086401C72E94B00C7FE57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70863F1C72E94B00C7FE57 /* main.swift */; };
 		CEBFBDAE1D068E95002ED8F6 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFBDAD1D068E95002ED8F6 /* utilities.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE05A4301D110B6F00F4C013 /* CartesianIterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianIterable.swift; sourceTree = "<group>"; };
 		CE70863C1C72E94B00C7FE57 /* password-cracker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "password-cracker"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE70863F1C72E94B00C7FE57 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CEBFBDA91D068CB9002ED8F6 /* password-cracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "password-cracker-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CE70863F1C72E94B00C7FE57 /* main.swift */,
 				CEBFBDAD1D068E95002ED8F6 /* utilities.swift */,
 				CEBFBDA91D068CB9002ED8F6 /* password-cracker-Bridging-Header.h */,
+				CE05A4301D110B6F00F4C013 /* CartesianIterable.swift */,
 			);
 			path = "password-cracker";
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			files = (
 				CEBFBDAE1D068E95002ED8F6 /* utilities.swift in Sources */,
 				CE7086401C72E94B00C7FE57 /* main.swift in Sources */,
+				CE05A4311D110B6F00F4C013 /* CartesianIterable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
